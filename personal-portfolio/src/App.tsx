@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { Button } from './components/button/button'
 import { Colors } from './assets/constants/colors'
+import { LinkButton } from './components/button/link-button/link-button'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,7 +24,8 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <Button backgroundColor={Colors.primary} color={Colors.secondary} text='Apertar'/>
+        <Button backgroundColor={Colors.primary} color={Colors.secondary} text='Apertar' handleClick={() => console.log('apertou')}/>
+        <LinkButton color={Colors.tertiary} text='Apertar' handleClick={() => console.log('apertou')}/>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>

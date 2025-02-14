@@ -1,10 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { Button } from './components/button/button'
-import { Colors } from './assets/constants/colors'
-import { LinkButton } from './components/button/link-button/link-button'
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
+import './App.css';
+import { Button } from './components/button/button';
+import { Colors } from './assets/constants/colors';
+import { LinkButton } from './components/button/link-button/link-button';
+import { Rating } from './components/rating/rating.component';
+import { Linkedin } from './components/icons/linkedin.icon.component';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,7 +27,9 @@ function App() {
           count is {count}
         </button>
         <Button backgroundColor={Colors.primary} color={Colors.secondary} text='Apertar' handleClick={() => console.log('apertou')}/>
-        <LinkButton color={Colors.tertiary} text='Apertar' handleClick={() => console.log('apertou')}/>
+        <LinkButton color={Colors.tertiary} text='Apertar' handleClick={() => console.log('apertou')} active={true}/>
+        <Rating score={4} color={Colors.tertiary} />
+        <Linkedin size={30} color={Colors.secondary} />
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
